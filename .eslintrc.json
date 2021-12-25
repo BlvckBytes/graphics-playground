@@ -1,0 +1,56 @@
+{
+    "ignorePatterns": "scripts/compiled/**",
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "airbnb-base",
+        "airbnb-typescript/base",
+        "prettier",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project": ["tsconfig.json"]
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "prettier",
+        "import"
+    ],
+    "rules": {
+        "semi": "off",
+        "comma-dangle": "off",
+        "no-console": "off",
+        "no-continue": "off",
+        "no-return-assign": ["error", "except-parens"],
+        "no-param-reassign": "off",
+        "class-methods-use-this": "off",
+        "quotes": ["error", "single", { 
+            "allowTemplateLiterals": true
+        }],
+        "space-before-blocks": ["error", "always"],
+        "arrow-spacing": ["error", {
+            "before": true,
+            "after": true
+        }],
+        "space-before-function-paren": ["error", "never"],
+        "func-call-spacing": ["error", "never"],
+        "keyword-spacing": ["error", {
+            "before": true,
+            "after": true
+        }],
+        "@typescript-eslint/lines-between-class-members": ["error", {
+            "exceptAfterSingleLine": true
+        }],
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/comma-dangle": ["error", "always-multiline"],
+        "@typescript-eslint/semi": ["error", "always"],
+        "import/no-named-as-default": "off",
+        "import/no-cycle": "off"
+    }
+}
